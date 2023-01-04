@@ -1,0 +1,7 @@
+# syntax=docker/dockerfile:1
+FROM python:3.11.1
+WORKDIR /api
+COPY . .
+RUN python3 -m venv .venv
+RUN /.venv/bin/pip install -r requirements.txt
+CMD ["/.venv/bin/python", "server.py"]

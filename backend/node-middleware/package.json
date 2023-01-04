@@ -1,8 +1,9 @@
 {
-  "name": "test-server",
+  "name": "middleware",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",

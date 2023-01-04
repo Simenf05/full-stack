@@ -6,7 +6,9 @@
   "scripts": {
     "start": "concurrently \"cd react-code && npm start\" \"cd test-server && npm start\"",
     "dev": "concurrently \"cd react-code && npm start\" \"cd test-server && npm run dev\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-dependencies": "npm i && concurrently \"cd test-server && npm i\" \"cd react-code && npm i\"",
+    "product-dependencies": "npm i --production && concurrently \"cd test-server && npm i --production\" \"cd react-code && npm i --production\""
   },
   "keywords": [],
   "author": "",
