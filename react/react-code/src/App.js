@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 function App() {
 
-    const [data, setData] = useState("");
+    const [data, setData] = useState("Loading...");
 
     useEffect(() => {
         fetch("http://localhost:3000/api")

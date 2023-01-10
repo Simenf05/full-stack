@@ -1,0 +1,25 @@
+
+
+services:
+  proxy:
+    build: 
+      context: ./nginx/
+      dockerfile: DockerFile
+
+    ports:
+      - ${PORT_OUT}:80
+
+  python-api:
+    build: 
+      context: ./python-api/
+      dockerfile: DockerFile
+      args:
+        - PORT_ARG=${API_PORT}
+  
+  node-middleware:
+    build: 
+      context: ./node-middleware/
+      dockerfile: DockerFile
+    
+    environment:
+      - PORT=${MIDDLEWARE_PORT}
