@@ -7,7 +7,7 @@ services:
       dockerfile: DockerFile
 
     ports:
-      - ${PORT_OUT}:80
+      - "${PORT_OUT}:80"
 
   python-api:
     build: 
